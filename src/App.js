@@ -8,42 +8,42 @@ import RatingCard from "./components/RatingCard";
 import MostOrderedFood from "./components/MostOrderedFood";
 import OrderGraph from "./components/OrderGraph";
 
-function Dashboard() {
+function App() {
   return (
     <div className="flex min-h-screen bg-[#f6f7fb] text-gray-800">
+      {/* Sidebar */}
       <Sidebar />
-      <div className="flex-1 flex flex-col bg-white">
-        <Header />
-        <div className="p-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Dashboard</h2>
 
-          {/* Top Row */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-gray-200 items-stretch min-h-[320px] mb-6">
-            <div className="lg:col-span-2 h-full">
-              <RevenueCard />
-            </div>
-            <div className="lg:col-span-1 h-full">
-              <OrderTimeCard />
-            </div>
+      {/* Main Section */}
+      <div className="flex-1 flex flex-col bg-white border-l border-gray-200">
+        {/* Header */}
+        <Header />
+
+        {/* Dashboard Main Content */}
+        <div className="p-8">
+          <h2 className="text-2xl font-semibold mb-6 text-gray-800">
+            Dashboard
+          </h2>
+
+          {/* === Top Section === */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 border border-gray-200 rounded-lg p-6">
+            <RevenueCard />
+            <OrderTimeCard />
           </div>
 
-          {/* Bottom Row */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200 items-stretch border-t border-gray-200 mt-0 min-h-[280px]">
-            <div className="h-full">
-              <RatingCard />
-            </div>
-            <div className="h-full">
-              <MostOrderedFood />
-            </div>
-            <div className="h-full">
-              <OrderGraph />
-            </div>
+          {/* === Bottom Section === */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 border border-gray-200 rounded-lg p-6 mt-6">
+            <RatingCard />
+            <MostOrderedFood />
+            <OrderGraph />
           </div>
         </div>
       </div>
     </div>
   );
 }
+
+export default App;
 
 function App() {
   return (
