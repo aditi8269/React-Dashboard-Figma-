@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App"; 
 
-// Mock the module so tests don’t crash
+
 jest.mock("./data/mock", () => ({
   summaryData: {
     revenue: { value: "IDR 7,852,000", change: "+2.1%", period: "1–12 Dec, 2020" },
