@@ -11,31 +11,33 @@ import OrderGraph from "./components/OrderGraph";
 function Dashboard() {
   return (
     <div className="flex min-h-screen bg-[#f6f7fb] text-gray-800">
-      {/* Sidebar */}
       <Sidebar />
 
-      {/* Main Section */}
       <div className="flex-1 flex flex-col bg-white border-l border-gray-200">
-        {/* Header */}
         <Header />
 
-        {/* Dashboard Main Content */}
         <div className="p-8">
-          <h2 className="text-2xl font-semibold mb-6 text-gray-800">
-            Dashboard
-          </h2>
+          <h2 className="text-2xl font-semibold mb-6 text-gray-800">Dashboard</h2>
 
-          {/* === Top Section === (No Gaps, Thin Dividers) */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 border border-gray-200 divide-x divide-y divide-gray-200">
-            <div className="p-6"><RevenueCard /></div>
-            <div className="p-6"><OrderTimeCard /></div>
+          <div className="grid grid-cols-3 gap-4">
+            <div className="col-span-2 border border-gray-200 rounded-lg p-6">
+              <RevenueCard />
+            </div>
+            <div className="col-span-1 border border-gray-200 rounded-lg p-6">
+              <OrderTimeCard />
+            </div>
           </div>
 
-          {/* === Bottom Section === */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 mt-6 border border-gray-200 divide-x divide-y divide-gray-200">
-            <div className="p-6"><RatingCard /></div>
-            <div className="p-6"><MostOrderedFood /></div>
-            <div className="p-6"><OrderGraph /></div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-6">
+            <div className="border border-gray-200 rounded-lg p-6">
+              <RatingCard />
+            </div>
+            <div className="border border-gray-200 rounded-lg p-6">
+              <MostOrderedFood />
+            </div>
+            <div className="border border-gray-200 rounded-lg p-6">
+              <OrderGraph />
+            </div>
           </div>
         </div>
       </div>
