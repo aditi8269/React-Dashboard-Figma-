@@ -33,4 +33,9 @@ npm test
 Developed by Aditi Kesharwani
 Built with React, Tailwind CSS, and Jest.
 
+------
+
+##### 
+Here is the link to the deployed project: https://68fb93ee6ea11e9f17aff82c--fanciful-vacherin-94d497.netlify.app/dashboard
+
 
