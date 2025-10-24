@@ -8,7 +8,7 @@ import RatingCard from "./components/RatingCard";
 import MostOrderedFood from "./components/MostOrderedFood";
 import OrderGraph from "./components/OrderGraph";
 
-function App() {
+function Dashboard() {
   return (
     <div className="flex min-h-screen bg-[#f6f7fb] text-gray-800">
       {/* Sidebar */}
@@ -25,17 +25,17 @@ function App() {
             Dashboard
           </h2>
 
-          {/* === Top Section === */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 border border-gray-200 rounded-lg p-6">
-            <RevenueCard />
-            <OrderTimeCard />
+          {/* === Top Section === (No Gaps, Thin Dividers) */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 border border-gray-200 divide-x divide-y divide-gray-200">
+            <div className="p-6"><RevenueCard /></div>
+            <div className="p-6"><OrderTimeCard /></div>
           </div>
 
           {/* === Bottom Section === */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 border border-gray-200 rounded-lg p-6 mt-6">
-            <RatingCard />
-            <MostOrderedFood />
-            <OrderGraph />
+          <div className="grid grid-cols-1 lg:grid-cols-3 mt-6 border border-gray-200 divide-x divide-y divide-gray-200">
+            <div className="p-6"><RatingCard /></div>
+            <div className="p-6"><MostOrderedFood /></div>
+            <div className="p-6"><OrderGraph /></div>
           </div>
         </div>
       </div>
@@ -43,12 +43,9 @@ function App() {
   );
 }
 
-export default App;
-
 function App() {
   return (
     <Routes>
-      {/* Redirect root `/` to `/dashboard` */}
       <Route path="/" element={<Navigate to="/dashboard" />} />
       <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
@@ -56,6 +53,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
